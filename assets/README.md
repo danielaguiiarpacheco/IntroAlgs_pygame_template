@@ -1,15 +1,26 @@
-# Assets
+# COBRALIA: SNAKE ASCENSION
 
-Esta pasta centraliza os recursos visuais e sonoros do jogo.
+## Sobre o Jogo
+Cobralia é uma reimaginação moderna do clássico "Snake Game". O jogador controla uma serpente guerreira que deve coletar maçãs mágicas para evoluir, enfrentar obstáculos, inimigos predadores e, ao final, derrotar o Guardião Corrompido.
 
-## Organização
+## Interações e Mecânicas Principais
+* Movimentação em grade (Grid-based).
+* Crescimento dinâmico ao coletar maçãs.
+* Sistema de Vidas e Pontuação.
+* Sistema de Fases com progressão por metas.
+* Power-ups (Velocidade, Lerdeza, Tesoura, Fantasma, etc).
+* Inimigos e Boss Fight final com múltiplos pontos fracos.
 
-- `imagens/`: sprites, fundos e ícones.
-- `sons/`: efeitos sonoros e músicas.
-- `fontes/`: fontes tipográficas customizadas.
+## Requisitos
+* Python 3.12+
+* Pygame-CE
 
-## Boas práticas
+## Como Executar
+1. Instale as dependências: `pip install -r requirements.txt` (ou `pip install pygame-ce`)
+2. Execute o jogo: `python main.py`
 
-- Use nomes de arquivo descritivos e sem espaços.
-- Prefira formatos leves (`.png`, `.ogg`, `.wav`, `.ttf`).
-- Registre a origem dos assets utilizados (quando externos).
+## Controles
+* **W, A, S, D** ou **Setas**: Movimentação
+* **ESPAÇO**: Dash (Custa 1 segmento da cobra)
+* **ESC**: Pausar / Voltar ao Menu
+* **ENTER**: Confirmar menus / Reiniciar
