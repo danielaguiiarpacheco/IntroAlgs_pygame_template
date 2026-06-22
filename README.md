@@ -1,91 +1,109 @@
-# Nome do Jogo
+# Documentacao
 
-Projeto final da disciplina de Introdução a Algoritmos/Programação, desenvolvido com Python e Pygame.
+Esta pasta concentra documentos de planejamento, organizacao e apoio ao desenvolvimento do jogo **Cobralia: Snake Ascension.**
 
-Este repositório é um template para os grupos da disciplina. A proposta é começar com uma base funcional e evoluir o jogo ao longo do semestre.
+## Sobre o Projeto
 
-## Integrantes do grupo
+Cobralia: Snake Ascension e uma releitura moderna do classico *Snake Game*, desenvolvida em Python utilizando a biblioteca Pygame.
 
-- Nome do integrante 1
-- Nome do integrante 2
-- Nome do integrante 3
-- Nome do integrante 4
+O jogador controla uma cobra que deve coletar macas para crescer, cumprir objetivos de cada fase e avancar por uma campanha composta por diferentes desafios, inimigos e mecanicas especiais.
 
-## Estrutura do projeto
+Entre os principais recursos previstos estao:
 
-- `main.py`: ponto de entrada da aplicação.
-- `src/`: código-fonte principal do jogo (loop, regras, sprites e dados).
-- `assets/`: imagens, fontes e sons.
-- `data/`: arquivos persistentes (recorde/ranking).
-- `tests/`: testes unitários com `pytest`.
-- `docs/`: documentação do projeto, incluindo proposta inicial.
+* Sistema de fases com metas progressivas;
+* Paredes fixas e paredes moveis;
+* Habilidade de **Dash**, consumindo recursos do jogador;
+* Itens especiais com efeitos temporarios;
+* Inimigos com inteligencia artificial;
+* Batalha contra um Chefao Final com pontos fracos e padroes de ataque.
 
-## Descrição do jogo
+---
 
-Descreva brevemente a ideia principal do jogo.
+## Arquivos
 
-Exemplo:
+* `proposta.MD`
 
-> O jogo consiste em controlar um personagem que deve coletar moedas e evitar obstáculos. O jogador ganha pontos ao coletar itens e perde vidas ao colidir com obstáculos. A partida termina quando o tempo acaba ou quando o jogador perde todas as vidas.
+  Documento contendo a proposta inicial do jogo, escopo, mecanicas previstas, organizacao do projeto e desafios esperados.
 
-## Objetivo do jogador
+---
 
-Explique o que o jogador precisa fazer para vencer ou avançar no jogo.
+## Estrutura Planejada do Projeto
 
-Exemplo:
-
-> O objetivo é coletar a maior quantidade possível de itens antes que o tempo acabe, evitando colisões com os obstáculos.
-
-## Regras do jogo
-
-Liste as principais regras do jogo.
-
-Exemplo:
-
-- O jogador se movimenta usando as setas do teclado.
-- Cada item coletado aumenta a pontuação.
-- Colidir com um obstáculo reduz a quantidade de vidas.
-- A partida termina quando o jogador perde todas as vidas ou quando o tempo acaba.
-
-## Controles
-
-Informe as teclas ou comandos utilizados no jogo.
-
-Exemplo:
-
-- Seta para cima: mover para cima
-- Seta para baixo: mover para baixo
-- Seta para esquerda: mover para esquerda
-- Seta para direita: mover para direita
-- Espaço: realizar ação
-- ESC: sair do jogo
-
-## Como executar o projeto
-
-### 1. Clonar o repositório
-
-```bash
-git clone LINK_DO_REPOSITORIO
-cd NOME_DA_PASTA
-pip install -r requirements.txt
-python main.py
+```text
+Projeto/
+│
+├── main.py
+├── config.py
+├── requirements.txt
+│
+├── assets/
+│   ├── images/
+│   ├── sounds/
+│   └── fonts/
+│
+├── core/
+│   ├── game.py
+│   ├── state_manager.py
+│   └── level_manager.py
+│
+├── entities/
+│   ├── snake.py
+│   ├── items.py
+│   ├── obstacles.py
+│   ├── predator.py
+│   └── boss.py
+│
+├── systems/
+│   ├── collision.py
+│   ├── pathfinding.py
+│   └── effects.py
+│
+├── ui/
+│   ├── hud.py
+│   └── menus.py
+│
+└── docs/
+    ├── proposta.MD
+    └── README.md
 ```
 
-## Como executar os testes
+---
 
-```bash
-python -m pytest
-```
+## Escopo Minimo da Entrega
 
-## Checklist mínimo para entrega
+A versao minima do jogo devera possuir:
 
-- Preencher este README com nome final, descrição real, regras e controles do jogo.
-- Atualizar `docs/proposta.MD` com a proposta do grupo.
-- Garantir que o jogo executa com `python main.py`.
-- Garantir que os testes passam com `pytest`.
+* Cobra funcional com crescimento ao coletar macas;
+* Colisao com paredes e com o proprio corpo;
+* Pelo menos **3 fases jogaveis**;
+* Paredes moveis;
+* Sistema de transicao entre fases;
+* Implementacao de no minimo **2 itens especiais**, como:
 
-## Observações para os alunos
+  * Pimenta (aumento de velocidade);
+  * Tesoura (reduz a cauda da cobra).
 
-- Mantenham o código organizado em módulos pequenos e com responsabilidade clara.
-- Comentem partes importantes da lógica, principalmente regras do jogo.
-- Registrem decisões técnicas no README do grupo ao longo do desenvolvimento.
+---
+
+## Melhorias Planejadas
+
+Funcionalidades previstas para expansao do projeto:
+
+* Movimentacao em 360° baseada em vetores;
+* Sistema de vida para o jogador;
+* Efeitos visuais e particulas;
+* Trilha sonora dinamica;
+* Modo Fantasma;
+* Inversao de controles;
+* Inteligencia Artificial avancada para o Chefao Final;
+* Sistema de pontuacao e ranking local.
+
+---
+
+## Sugestoes de Uso
+
+* Registrar decisoes importantes do grupo;
+* Documentar alteracoes de mecanicas e regras;
+* Registrar mudancas de escopo;
+* Manter historico de ideias e melhorias futuras;
+* Anotar problemas encontrados e respectivas solucoes durante o desenvolvimento.
